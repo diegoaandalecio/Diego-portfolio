@@ -1,0 +1,73 @@
+<!--
+    
+<!DOCTYPE html> A tag DOCTYPE é necessário para que o navegador reconheça a versão do HTML. Ela é presente em todos documentos de HTML.
+<title></title> A tag title é utilizada para definir o texto que será definido na aba do navegador.
+<head></head> A cabeça (head) são as informações que estamos passando para o navegador
+<body></body> O corpo (body) são as informações que queremos exibir na página. Dentro dele, constam todas as informações de texto da página.
+<html></html> A tag html é necessária para todos os arquivos, sendo ela que mostra onde será iniciado a leitura e finalizado. Ela deve abrir no início e fechar no fim do código.
+Também na tag html, deve ser inserido a linguagem da página, por exemplo, pt-br
+<meta charset="UTF-8"> Devemos passar para o navegador qual linguagem estamos usando. Para isto, todo código deve constar a tag META, que cita também qual dicionário utilizar (UTF-8)
+<header></header> HEADER é a tag que refere-se ao cabeçalho da página.
+<main></main> MAIN é a tag para determinar o conteúdo principal da página HTML.
+<footer></footer> FOOTER é a tag para determinar o RODAPÉ do HTML.
+<h1></h1> h quer dizer heading, e é utilizado para títulos do conteúdo
+<h2></h2> Existem 06 níveis. h1 até h6
+<p></p> O p (paragrph) é utilizado para parágrafos de texto
+<strong></strong> A palavra Strong é utilizada para gerar um negrito nas palavras
+<em></em> A sigla em é utilizada para gerar um texto em itálico, sendo utilizada somente em uma palavra ou parágrafo
+<a href="index.html"></a> ANCOR é a tag utilizada para criar um link para outro arquivo. Junto dele há o HREF, onde será feito a referência para qual arquivo deve ser levado
+<div></div> DIV é a tag de divisão do conteúdo. Utilizada em blocos não semânticos.
+<section></section> SECTION é uma tag de divisão como a DIV, porém, é coloca onde se tem uma estrutura semanticamente mais organizada.
+<nav></nav> NAVIGATION é a tag que representa uma seção de uma página que aponta para outras páginas ou para outras áreas da página, ou seja, uma seção com links de navegação.
+<fieldset></fieldset> FIELDSET é uma TAG como a DIV, porém, utilizada quando se tem vários inputs como filho. Ela faz com que o código se torne mais semântico.
+<legend></legend> Dentro de um Fieldset não temos o parágrafo e sim, a TAG LEGEND.
+<table></table> Tag TABLE para criação de uma tabela.
+<thead></thead> TAG THEAD para mostrar que dentro dele há uma CABEÇALHO
+<tr></tr> Tag TABLEROW (TR) é utilizado para se criar uma linha na tabela
+<th></th> TAG TH para criar colunas dentro do cabeçalho. Ela deve ser utilizada dentro de uma TR.
+<tbody></tbody> TAG TBODY para mostrar que é o corpo da tabela. Abaixo do cabeçalho.
+<td></td> Tag TABLEDATA (TD) é utilizada para criar células (colunas) dentro de uma linha.
+<tfoot></tfoot>TAG TFOOT para mostrar que dentro dele há o RODAPÉ da tabela.
+
+CSS:
+reset.css -> Arquivo criado pela comunidade que anula todos os erros gerados pelo navegador.
+
+DISPLAY
+Inline -> Na forma inline, o conteúdo da tag é do tamanho do conteúdo que está ali, uma imagem, ela vai ter a largura e altura daquela imagem.
+Block -> Quando uma tag é do tipo block, o tamanho dela vai ser sempre 100% da página
+Inline-block -> Os conteúdos ficam todos alinhados dentro de um bloco.
+
+POSITION:
+position: static -> Por padrão já vem nos elementos. Ele será estático em sua posição inicial
+position: relative -> O elemento se torna dinâmico, relativo em relação a outro elemento. Permite trabalhar o deslocamento com top, left, etc.
+position: absolute -> É a posição absoluta do elemento em relação a PÁGINA, assim, consigo posicionar o meu elemento em qualquer lugar da página
+
+FLOAT: O elemento "descola" da página (levanta) mas sua sombra continua sendo ocupado, com isto, os elementos abaixo sobem mas não ocupam a sombra. Eles contormam o elemento.
+OBS: Quando utilizado o FLOAT, ele altera toda estrutura da página. Todos os elementos abaixo são afetados por ele.
+
+CLEAR: Para limpar o elemento float no elemento, deve ser utilizado o comando clear.
+
+Forças de marcação -> Caso utilizarmos o identificador(ID), temos mais força que a classe, que tem mais força que a TAG do elemento, ou seja, a ordem de força é (ID -> CLASS -> TAG). O ID sempre será preferencial nas declarações, e assim por diante.
+
+SELETORES: > , + , ~ e NOT
+
+.beneficios > h3 {		O SELETOR > seleciona o FILHO direto pelo nível.
+	background: red;
+}
+
+.beneficios + h3 {		O SELETOR + seleciona o primeiro IRMÃO direto, independente do nível.
+	background: red;
+}
+
+.beneficios ~ h3 {		O SELETOR ~ seleciona todos as tags passadas. Neste caso, caso tivéssemos 3 filhos H3, as características seriam aplicadas a todos eles.
+	background: red;
+}
+
+CASO QUEIRAMOS EXCLUIR UM ITEM DAS APLICAÇÕES, UTILIZAMOS O SELETOR ABAIXO
+AQUI ESTÁ EXCLUINDO O P COM CLASSE MISSÃO DA APLICAÇÃO DO BACKGROUND
+
+.principal p:not(#missao) {		SELETOR NOT() para excluir um item da aplicação das características
+    background: orange;
+}
+
+section > p + h2  -> h2 que é irmão direto do P que é o filho do section.

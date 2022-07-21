@@ -1,0 +1,338 @@
+body {
+	font-family: 'Montserrat', sans-serif;	/*IMPORTAÇÃO DE FONTE DO GOOGLE FONTS*/
+}
+
+header {
+	background: #BBBBBB;
+	padding: 20px 0;
+}
+
+.caixa {
+	position: relative;
+	width: 940px;
+	margin: 0 auto;
+}
+
+nav {
+	position: absolute;
+	top: 110px;
+	right: 0;
+}
+
+nav li {
+	display: inline;
+	margin: 0 0 0 15px;
+}
+
+nav a {
+	text-transform: uppercase;
+	color: #000000;
+	font-weight: bold;
+	font-size: 22px;
+	text-decoration: none;
+}
+
+nav a:hover {
+	color: #C78C19;
+	text-decoration: underline;
+}
+
+.produtos {
+	width: 940px;
+	margin: 0 auto;
+	padding: 50px 0;
+}
+
+.produtos li {
+	display: inline-block;
+	text-align: center;
+	width: 30%;
+	vertical-align: top;
+	margin: 0 1.5%;
+	padding: 30px 20px;
+	box-sizing: border-box;
+	border: 2px solid #000000;
+	border-radius: 10px;
+}
+
+.produtos li:hover {
+	border-color: #C78C19;
+}
+
+.produtos li:active {
+	border-color: #088C19;	
+}
+
+.produtos li:hover h2 {
+	font-size: 34px;
+}
+
+.produtos h2 {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.produto-descricao {
+	font-size: 18px;
+}
+
+.produto-preco {
+	font-size: 22px;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+footer {
+	text-align: center;
+	background: url("bg.jpg");
+	padding: 40px 0;
+}
+
+.copyright {
+	color: #FFFFFF;
+	font-size: 13px;
+	margin: 20px 0 0;
+}
+
+form {
+	margin: 40px auto;
+	margin-left: 10px;
+}
+
+form label, form legend {
+	display:block;
+	font-size: 20px;
+	margin: 0 0 10px;
+}
+
+.input-padrao {
+	display: block;
+	margin: 0 0 20px;
+	padding: 10px 25px;
+	width: 50%;
+}
+
+.checkbox {
+	margin: 20px 0;
+}
+
+.enviar {
+	width:40%;
+	padding: 15px 0;
+	background: orange;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	border: none;
+	border-radius: 5px;
+	transition: 1s all;
+	cursor: pointer;
+}
+
+.enviar:hover {
+	background: darkorange;
+	transform: scale(1.2);
+}
+
+table {
+	margin: 20px 0 40px;
+	margin-left: 10px;
+}
+
+thead {
+	background: #555555;
+	color: white;
+	font-weight: bold;
+}
+
+td, th {
+	border: 1px solid #000000;
+	padding: 8px 15px;
+}
+
+
+
+/*CSS da página inicial*/
+
+
+
+.banner {
+	width: 100%;
+}
+
+.principal {
+	padding: 3em 0;
+	background: #FEFEFE;
+	width: 940px;
+	margin: 0 auto;
+}
+
+.titulo-principal:first-letter {
+	/*PSEUDO ELEMENTO -> first-letter é utilizado para enviar uma propriedade somente para a primeira letra*/
+	font-weight: bold;
+}
+
+/*PSEUDO ELEMENTO BEFORE, PARA COLOCAR ALGO ANTES DO ELEMENTO
+.titulo-principal:before {
+	content: "[";	
+}
+*/
+
+/*PSEUDO ELEMENTO AFTER, PARA COLOCAR ALGO DEPOIS DO ELEMENTO
+.titulo-principal:after {
+	content: "]";
+}
+*/
+
+/* p:first-line{	PSEUDO ELEMENTO FIRST LINE. É utilizado para pegar aplicar características somente na primeira linha.
+	font-style: italic;
+} */
+
+.titulo-principal {
+	text-align: center;
+	font-size: 2em;		/*EM é a característica que determina o tamanho da fonte em relação as outras coisas. 2em quer dizer que ela terá o dobro de tamanho das 1em, e assim por diante.*/
+	margin: 0.5em 0 1em;	/*0,5em para cima e 1em para baixo*/
+	clear: left;	/*Clear para limpar o float utilizado na imagem e está afetando o título Benefícios*/
+	color:rgba(0, 0, 0, 0.7);	/*RGB-A (ALFA) refere-se a OPACIDADE no último termo.*/
+	/*text-shadow: 2px 2px 2px lightblue;*/		/*Sombra aplicada ao texto. É aplicado do mesmo modo que a box-shadow*/
+}
+
+.principal p {
+	margin: 0 0 1em;	/*1em de margem para baixo nos parágrafos*/
+}
+
+.principal strong {
+	font-weight: bold;
+}
+
+.principal em {
+	font-style: italic;
+}
+
+.conteudo-beneficios {
+	width: 640px;
+	margin: 0 auto;
+}
+
+.lista-beneficios {
+	width: 40%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.imagem-beneficios {
+	width: 60%;
+	opacity: 1;		/*Opacidade vai de 1 a 0. 1 exibe 100%, 0 exibe 0%*/
+	box-shadow: 10px 10px 30px 5px black;		/*SOBRA: aplica-se com 5 parâmetros (pixels de deslocalmento no eixo X, eixo Y, transparência da sombra, espalhamento da sombra e a cor da sombra)*/
+	/*É possível também aplicar uma sombra interna com o box-shadow: inset*/
+}
+
+.imagem-beneficios:hover {
+	opacity: .3;			/*Quando o mouse está por cima, altera-se a opacidade*/
+	transition: 400ms;	/*Tempo para transição na opacidade da imagem*/
+}
+
+.utensilios {
+	width: 120px;
+	float: left;		/*Faz com que o elemento flutue e os elementos o contornem*/
+	margin: 0 20px 20px 0;	/*CIMA DIREITA BAIXO ESQUERDA*/
+}
+
+.mapa {
+	padding: 3em 0;
+	background: linear-gradient(#FEFEFE, #888888);	/*Propriedade linear-gradient() do background é utilizado para realizar transições de cores*/
+	/*É possível colocar também inclinação do gradiente (45deg) no primeiro parâmetro*/
+	/*Neste caso, foi colocado do branco (div superior) ao cinza (div inferior)*/
+}
+
+.mapa-conteudo {
+	width: 940px;
+	margin: 0 auto;
+}
+
+.mapa p {
+	margin: 0 0 2em;
+	text-align: center;
+}
+
+.beneficios {
+	padding: 3em 0;
+	background: #888888;
+	/*box-shadow: inset 10px 0 20px 10px red;*/  	/*Sombra Interna (INSET). É aplicado com os mesmos parâmetros do box-shadow*/
+}
+
+.itens:before {		/*PSEUDO-ELEMENTO APLICADO A .ITENS, PARA COLOCAR ALGO ANTES DE TODOS ITENS. NESTE CASO, UM CONTEUDO QUE É UMA ESTRELA*/
+	content: "★";
+}
+
+.itens {
+	line-height: 1.5em;		/*Propriedade line-height altera o tamanho da linha*/
+}
+
+.itens:nth-child(1) {	
+/*PSEUDO-CLASSES - first-child é utilizado para pegar o primeiro elemento da classe. Neste caso, irá pegar o primeiro item citado (Atendimento ao cliente)*/
+/*Temos como utilizar o last-child (último elemento)*/
+/*Por último, o nth-child(n) pega qualquer elemento, sendo que o número do elemento deve ser colocado no parênteses*/
+	font-weight: bold;
+}
+
+.video {
+	width: 100%;
+	margin: 2em 0;
+}
+
+/*
+
+SELETORES:
+
+.beneficios > h3 {		O SELETOR > seleciona o FILHO direto pelo nível.
+	background: red;
+}
+
+.beneficios + h3 {		O SELETOR + seleciona o primeiro IRMÃO direto, independente do nível.
+	background: red;
+}
+
+.beneficios ~ h3 {		O SELETOR ~ seleciona todos as tags passadas. Neste caso, caso tivéssemos 3 filhos H3, as características seriam aplicadas a todos eles.
+	background: red;
+}
+
+CASO QUEIRAMOS EXCLUIR UM ITEM DAS APLICAÇÕES, UTILIZAMOS O SELETOR ABAIXO
+AQUI ESTÁ EXCLUINDO O P COM CLASSE MISSÃO DA APLICAÇÃO DO BACKGROUND
+
+.principal p:not(#missao) {		SELETOR NOT() para excluir um item da aplicação das características
+    background: orange;
+}
+
+section > p + h2  --> h2 que é irmão direto do P que é o filho do section.
+
+*/
+
+@media screen and (max-width: 480px) {		/*Propriedade para dar responsavidade até 480px */
+	.caixa, .principal, .conteudo-beneficios, .mapa-conteudo {
+		width: auto;
+	}
+
+	h1 {
+		text-align: center;
+	}
+
+	nav {
+		position: static;
+		text-align: center;
+	}
+
+	.lista-beneficios, .imagem-beneficios {
+		width: 100%;
+	}
+
+	.produtos {
+		width: 100%;
+	}
+
+	.produtos li {
+		display: block;
+		width: 90%;
+		margin: 5px auto;
+	}
+}
