@@ -1,0 +1,131 @@
+/*Quando queremos alinhar algo com flexbox, sempre devemos colocar a característica no seu "pai"*/
+
+.cabecalhoPrincipal .container {    /*CHAMANDO CONTAINER DO CABEÇALHO PRINCIPAL*/
+    display: flex;      /*DISPLAY FLEXBOX*/
+    align-items: center;    /*ALINHAR ITENS DO FLEXBOX NO CENTRO*/
+    justify-content: space-between; /*PEGANDO O ESPAÇO VAZIO E JOGANDO ENTRE (BETWEEN) OS ITENS*/
+}
+
+.cabecalhoPrincipal-nav {
+    display: flex;      /*ALINHANDO IS ITENS DA NAVEGAÇÃO CABEÇALHO*/
+}
+
+.rodapePrincipal .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rodapePrincipal-patrocinadores-list {
+    display: flex;
+    align-items: center;
+    width: 75%;     /*75% DE WIDTH PARA OS PATRICINADORES E 25% PARA O FORM CONTATO*/
+    justify-content: space-around;  /*DISTRIBUI OS ESPAÇOS EM VOLTA DOS ELEMENTOS*/
+}
+
+.rodapePrincipal-contatoForm {
+    width: 25%;
+}
+
+.rodapePrincipal-contatoForm-fieldset {
+    display: flex;
+}
+
+.rodapePrincipal-navMap-list {
+    display: flex;
+    flex-direction: column;     /*DIRECIONAD O DISPLAY FLEX NA VERTICAL. POR PADRÃO, ELE VEM NA HORIZONTAL (ROW)*/
+    flex-wrap:wrap;     /*FLEX-WRAP PARA QUEBRAR AS LINHAS APÓS CHEGAR NO FIM DO FLEX DIRECTION*/
+    height: 260px;  /*ESTABELECENDO ALTURA DA COLUNA PARA QUEBRA DO WRAP*/
+}
+
+.conteudoPrincipal-cursos {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.conteudoPrincipal-cursos-link {
+    width: 23%;
+}
+
+.conteudoPrincipal-cursos-link:nth-child(4n) {  /*PEGANDO OS ELEMENTOS MULTIPLOS DE 4 (4N) E RETIRANDO A MARGEM DIREITA*/
+    margin-right: 0;
+}
+
+.conteudoPrincipal-cursos-link:nth-child(4n+1) {    /*PEGANDO OS QUINTOS ELEMENTOS (4n + 1) E RETIRANDO A MARGEM ESQUERDA*/
+    margin-left: 0;
+}
+
+.videoSobre .container {
+    display: flex;
+    /* justify-content: space-around; */
+    text-align: center;
+}
+
+.videoSobre-sobre {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;        /*Crescer em todo o espaço que sobra na caixa. */
+    /*Quanto maior o número colocado no FLEX-GROW, maior o numero de divisão que ele fará na caixa para fazer o cálculo do preenchimento*/
+}
+
+.videoSobre-sobre-list {
+    flex-grow: 1;       /*Crescer em todo o espaço do flex disponível. NEste exemplo, o botão preencheu e foi para baixo*/
+}
+
+.videoSobre-video {
+    flex-grow: 1;
+}
+
+
+/*PARTE MOBILE*/
+
+@media (max-width: 768px){
+
+    .cabecalhoPrincipal-nav {
+        flex-direction: column;
+    }
+
+    .cabecalhoPrincipal .container {
+        flex-direction: column;
+        align-items: initial;
+        text-align: center;
+    }
+
+    .conteudoPrincipal-cursos {
+        flex-direction: column;
+    }
+
+    .conteudoPrincipal-cursos-link {
+        width: 100%;
+    }
+
+    .rodapePrincipal-navMap-list {
+        height: auto;
+    }
+
+    .rodapePrincipal-patrocinadores .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rodapePrincipal-contatoForm {
+        width: auto;
+    }
+
+    .rodapePrincipal-patrocinadores-list {
+        margin: 0;
+        width: 100%;
+    }
+
+    .videoSobre .container {
+        flex-direction: column;
+    }
+
+    .videoSobre-video {
+        margin: 0 auto;
+        flex-shrink: 1;     /*Flex shrink faz com que, ao reduzir a tela, o item diminua mais que os outros do flexbox*/
+        /*Flex shrink 0 (ZERO) faz com que o elemento não diminua, ao reduzir o tamanho da tela*/
+        /*flex-basis: 25%;    Flex basis define um valor fixo (base) para todos os elementos */
+    }
+}
